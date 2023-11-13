@@ -15,6 +15,7 @@
         <table class="table">
             <thead class="blue-bg">
                 <tr>
+                    <th>User</th>
                     <th>Title</th>
                     <th>Category</th>
                     <th>Description</th>
@@ -25,6 +26,7 @@
             <tbody>
                 @foreach($feedbackSubmissions as $submission)
                     <tr>
+                        <td>{{ $submission->user->name }}</td>
                         <td>{{ $submission->title }}</td>
                         <td>{{ $submission->description }}</td>
                         <td>{{ $submission->category }}</td>

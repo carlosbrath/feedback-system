@@ -287,30 +287,44 @@ i.icon_agileits {
 
 /* Commnets form */
 
-.comment-form {
-    margin: 20px 0;
-}
-
-.comment-form form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.comment-form label {
-    font-weight: bold;
-}
-
-.comment-form textarea {
-    width: 100%;
-    resize: vertical;
-}
-
-.comment-form button {
-    margin-top: 10px;
-}
-
+/* Comment Main Content */
 .comment-main {
     font-size: 16px;
+}
+
+/* Comment Details (User and Date) */
+.comment-details {
+    margin-top: 10px;
+    color: #888;
+}
+
+/* Comment Form */
+.comment-form {
+    margin-top: 20px;
+}
+
+/* Comment Textarea */
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Add Comment Button */
+.comment-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add Comment Button Hover */
+.comment-form button:hover {
+    background-color: #0056b3;
 }
 
 
