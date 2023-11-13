@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w3layouts_main wrap">
+<div class="w3layouts_main wrap bg-dark text-white shadow">
 	  <h3>Please help us to serve you better by taking a couple of minutes. </h3>
 	    <form action="{{ route('feedback.store') }}" method="post" class="agile_form">
             <h2>Feedback title</h2>

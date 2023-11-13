@@ -19,18 +19,11 @@ Route::get('/', function () {
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/suggestions', [App\Http\Controllers\HomeController::class, 'getSuggestions'])->name('suggestions');
-Route::post('/getRequests', [App\Http\Controllers\HomeController::class, 'getRequests'])->name('getRequests');
-Route::post('/connections', [App\Http\Controllers\HomeController::class, 'getConnections'])->name('connections');
-Route::post('/sendRequest', [App\Http\Controllers\HomeController::class, 'sendRequest'])->name('sendRequest');
 
-
-Route::get('/feedback', [App\Http\Controllers\HomeController::class, 'feedback'])->name('feedback');
 
 
 // Define routes for the FeedbackController
-Route::get('/feedback', [App\Http\Controllers\FeedbackController::class, 'index'])->name('feedback.index');
+Route::get('/home', [App\Http\Controllers\FeedbackController::class, 'index'])->name('home');
 Route::get('/feedback/create', [App\Http\Controllers\FeedbackController::class, 'create'])->name('feedback.create');
 Route::post('/feedback/store', [App\Http\Controllers\FeedbackController::class, 'store'])->name('feedback.store');
 Route::post('/feedback/{feedbackSubmission}/upvote', [App\Http\Controllers\FeedbackController::class, 'upvote'])->name('feedback.upvote');

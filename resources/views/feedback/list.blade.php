@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <h1>Feedback Submissions</h1>
+                <h1>Feedbacks</h1>
             </div>
             <div class="col-4 text-right">
                 <a class="btn btn-primary" href="/feedback/create">Add Feedback</a>
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-12">
         <table class="table">
-            <thead>
+            <thead class="blue-bg">
                 <tr>
                     <th>Title</th>
                     <th>Category</th>
@@ -33,10 +33,10 @@
                             <div class="d-flex">
                         <form method="post" action="{{ route('feedback.upvote', $submission) }}">
                             @csrf
-                            <button type="submit" class="btn d-flex mr-3 btn-primary"><span class="mr-3" id="icon"><i class="far fa-thumbs-up"></i></span>
+                            <button type="submit" class="btn d-flex mr-3 btn-primary btn-info"><span class="mr-3" id="icon"><i class="far fa-thumbs-up"></i></span>
                             <span id="count">{{ $submission->votes }}</span></button>
                         </form>
-                        <button type="button" class="btn d-flex mr-3 btn-primary" data-toggle="modal" data-target="#dynamicModal" data-id="{{ $submission->id }}"><span class="mr-2" id="icon"><i class="fa-solid fa-comment"></i></span>
+                        <button type="button" class="btn d-flex mr-3 btn-primary btn-info" data-toggle="modal" data-target="#dynamicModal" data-id="{{ $submission->id }}"><span class="mr-2" id="icon"><i class="fa-solid fa-comment"></i></span>
                         <span id="count">{{ $submission->comments->count() }}</span></button>
                         </div>
                         </td>
@@ -49,7 +49,7 @@
         </div>
         <div class="row">
             <div class="col-6">
-            {{ $feedbackSubmissions->links() }}
+            {{ $feedbackSubmissions->links('pagination::bootstrap-4') }}
             </div>
         </div>
     </div>

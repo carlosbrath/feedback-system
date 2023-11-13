@@ -23,6 +23,6 @@ class CommentsController extends Controller
         $comment->user_id = 3;
         $comment->content = $request->content;
         $comment->save();
-        return redirect()->route('feedback.index')->with('success', 'Feedback submitted successfully!');
+        return redirect()->route('home')->with('success', 'Feedback submitted successfully!');
     }
 }

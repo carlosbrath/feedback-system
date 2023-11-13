@@ -97,6 +97,7 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 }
+
 td, th {
 	border: 1px solid #dddddd;
 	text-align: left;
@@ -112,11 +113,25 @@ svg {
     padding: 5px 10px;
     border-radius: 5px;
 }
-
+.blue-bg {
+    background-color: #1f3f49;
+    color: #ffffff;
+}
+.btn-info {
+    color: #ffffff;
+    background-color: #679996;
+    border-color: #679996;
+    box-shadow: none;
+}
+.btn-info:hover {
+    color: #ffffff;
+    background-color: #1f3f49;
+    border-color: #1f3f49;
+}
 /* feedback-form*/
 .w3layouts_main h3{
 	font-size: 1em;
-    color: #e6cfcf;
+	color: #ffffff;
 	line-height: 1.5;
 }
 .agile_form h2 {
@@ -311,6 +326,60 @@ i.icon_agileits {
 	border: none;
 	cursor: pointer;
   }
+
+  /* Pagination  */
+
+  /* Add styles for pagination links */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+    list-style: none;
+    display: inline-block;
+}
+
+.pagination .page-link {
+    padding: 8px 12px;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+}
+
+.pagination .page-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination .active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+.pagination .disabled .page-link {
+    pointer-events: none;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    color: #777;
+}
+
+/* Optional: Customize the navigation buttons (Previous and Next) */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    border-radius: 4px;
+}
+
+.pagination .page-item:first-child .page-link:hover,
+.pagination .page-item:last-child .page-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
 /* -- Responsive code -- */
 
 @media screen and (max-width: 1440px){

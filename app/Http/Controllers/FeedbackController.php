@@ -14,7 +14,7 @@ class FeedbackController extends Controller
     }
     public function index()
     {
-        $feedbackSubmissions = FeedbackSubmission::paginate(10);
+        $feedbackSubmissions = FeedbackSubmission::orderBy('created_at', 'desc')->paginate(10);
         return view('feedback.list', compact('feedbackSubmissions'));
     }
     // Method to display the feedback form
@@ -32,7 +32,7 @@ class FeedbackController extends Controller
         $feedback->category = $request->category;
         $feedback->save();
 
-        return redirect()->route('feedback.index')->with('success', 'Feedback submitted successfully!');
+        return redirect()->route('home')->with('success', 'Feedback submitted successfully!');
     }
     public function upvote(FeedbackSubmission $feedbackSubmission)
     {
