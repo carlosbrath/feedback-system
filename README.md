@@ -34,3 +34,11 @@ If you'd like to contribute to the project, please follow our [Contribution Guid
 
 This project is licensed under the [MIT License](LICENSE).
 
+## ------------------ Vuew JS Prject Confighration --------------
+ - Clone Project From github
+ - Run Composer install 
+ - Run npm install 
+ - Run command npm install --save-dev vue
+ - Run Command  npm run dev
+
+

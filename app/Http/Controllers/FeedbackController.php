@@ -14,8 +14,8 @@ class FeedbackController extends Controller
     }
     public function index()
     {
-        $feedbackSubmissions = FeedbackSubmission::orderBy('created_at', 'desc')->paginate(10);
-        return view('feedback.list', compact('feedbackSubmissions'));
+        $data = FeedbackSubmission::orderBy('created_at', 'desc')->with('user')->get();
+        return response()->json(['status' => true, 'data' => $data]);
     }
     // Method to display the feedback form
     public function create()
@@ -34,11 +34,15 @@ class FeedbackController extends Controller
 
         return redirect()->route('home')->with('success', 'Feedback submitted successfully!');
     }
-    public function upvote(FeedbackSubmission $feedbackSubmission)
+    // public function upvote(FeedbackSubmission $feedbackSubmission)
+    // {
+    //     $feedbackSubmission->increment('votes'); // Increase the vote count
+    //     return back(); // Redirect back to the feedback list
+    // }
+    public function upvote()
     {
-        $feedbackSubmission->increment('votes'); // Increase the vote count
-        return back(); // Redirect back to the feedback list
+        $feedbackSubmission = FeedbackSubmission::find(2);
+        $feedbackSubmission->increment('votes'); 
+        return response()->json(['status' => true, 'data' => $feedbackSubmission], 202);
     }
-    
-    
 }
