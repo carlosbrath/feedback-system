@@ -47,7 +47,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               }
               localStorage.setItem('APP_DEMO_USER_TOKEN', result.data.token);
               _context.next = 8;
-              return router.push('/');
+              return router.push('/home');
             case 8:
               _context.next = 13;
               break;
@@ -126,7 +126,7 @@ var _hoisted_10 = {
   "class": "form-group text-center mt-2"
 };
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "btn btn-primary mr-2",
+  "class": "btn btn-primary m-2",
   type: "submit"
 }, " Sign In ", -1 /* HOISTED */);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -160,7 +160,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     required: ""
   }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <p class=\"text-red text-xs italic\">Please choose a password.</p> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    "class": "btn btn-secondary ml-2",
+    "class": "btn btn-secondary m-2",
     to: "register"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {

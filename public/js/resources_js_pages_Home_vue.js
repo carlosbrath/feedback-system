@@ -155,16 +155,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return _context4.abrupt("return", alert(req.data.message));
             case 8:
               todos.value.push(req.data.data);
-              _context4.next = 14;
+              _context4.next = 15;
               break;
             case 11:
               _context4.prev = 11;
               _context4.t0 = _context4["catch"](0);
-              // await router.push('/login')
-              console.log(_context4.t0);
-            case 14:
-              isLoading.value = false;
+              _context4.next = 15;
+              return router.push('/login');
             case 15:
+              isLoading.value = false;
+            case 16:
             case "end":
               return _context4.stop();
           }

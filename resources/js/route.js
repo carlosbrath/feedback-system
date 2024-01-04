@@ -4,7 +4,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/login',
+            path: '/',
             component: () => import('./pages/Login.vue')
         },
         {
@@ -12,7 +12,7 @@ const router = createRouter({
             component: () => import('./pages/Register.vue')
         },
         {
-            path: '/',
+            path: '/home',
             component: () => import('./pages/Home.vue')
         },
         {

@@ -22482,7 +22482,7 @@ __webpack_require__.r(__webpack_exports__);
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
   routes: [{
-    path: '/login',
+    path: '/',
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_pages_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/Login.vue */ "./resources/js/pages/Login.vue"));
     }
@@ -22492,7 +22492,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
       return __webpack_require__.e(/*! import() */ "resources_js_pages_Register_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/Register.vue */ "./resources/js/pages/Register.vue"));
     }
   }, {
-    path: '/',
+    path: '/home',
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_pages_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/Home.vue */ "./resources/js/pages/Home.vue"));
     }
